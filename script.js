@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Contact section reached: hide the sidebar.
-          // Set inline styles directly (not Tailwind classes) so this always
-          // works regardless of whether script.js is scanned by Tailwind's build.
           sidebar.style.opacity = '0';
           sidebar.style.pointerEvents = 'none';
         } else {
